@@ -1,0 +1,5 @@
+name = Formolok
+description = Form alter megvalósítása, user login oldal módosítása
+
+core = 7.x
+package = Drupal Hétvége
