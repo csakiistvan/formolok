@@ -18,4 +18,9 @@ function formolok_form_user_login_alter(&$form, &$form_state) {
   $form['pass']['#weight'] = -2;
   
   // saját szöveg elhelyezése a formban
+  $form['sajatszoveg'] = array(
+    '#markup' => t('Ez itt a saját szövegem, ami ráadásul fordítható is egyből.');
+  );
+
+  
 }
