@@ -3,7 +3,12 @@
 /**
 * további infók a form alterről, http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_form_alter/7
 */
+function formolok_form_alter(&$form, &$form_state, $form_id) {
+  // kapcsold be a Devel modult, és ezzel megkaphatod mik a formok id-jai a látogatott oldalon. Ha hazsnálni szeretnéd kapcsold be a devel modult, és kommenteld ki a következő sort. 
+  // dpm($form_id);
+}
 
+// a drupal oldalad /user oldalon található formjának módosítása
 function formolok_form_user_login_alter(&$form, &$form_state) {  
   // Submit elem értékének átírása
   $form['actions']['submit']['#value'] = 'Go, Go, Gooo';
@@ -16,11 +21,4 @@ function formolok_form_user_login_alter(&$form, &$form_state) {
   
   // Usernév elem súlyának módosítása 
   $form['pass']['#weight'] = -2;
-  
-  // saját szöveg elhelyezése a formban
-  $form['sajatszoveg'] = array(
-    '#markup' => t('Ez itt a saját szövegem, ami ráadásul fordítható is egyből.');
-  );
-
-  
 }
