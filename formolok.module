@@ -18,7 +18,7 @@ function formolok_form_user_login_alter(&$form, &$form_state) {
   $form['actions']['#weight'] = -1;
   // Usernév elem súlyának módosítása 
   $form['name']['#weight'] = 0;
-  // Usernév elem súlyának módosítása 
+  // Jelszó elem súlyának módosítása 
   $form['pass']['#weight'] = -2;
 }
 
