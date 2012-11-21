@@ -4,11 +4,13 @@
  * Kapcsold be a Devel modult, és ezzel megkaphatod mik a formok id-jai a látogatott oldalon. 
  * Ha használni szeretnéd, kapcsold be a devel modult és kommenteld ki a következő dpm-et. 
  */
-
 function formolok_form_alter(&$form, &$form_state, $form_id) {
   // dpm($form_id);
 }
-// A drupal oldalad /user oldalon található formjának módosítása
+
+/**
+ * A drupal oldalad /user oldalon található formjának módosítása
+ */
 function formolok_form_user_login_alter(&$form, &$form_state) {  
   // Submit elem értékének átírása
   $form['actions']['submit']['#value'] = 'Go, Go, Gooo'; 
@@ -21,5 +23,5 @@ function formolok_form_user_login_alter(&$form, &$form_state) {
 }
 
 /**
-* további infók a form alterről, goo.gl/CG2dw
+* további infók a form alterről, http://goo.gl/CG2dw
 */
