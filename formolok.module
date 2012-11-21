@@ -1,24 +1,25 @@
 <?php 
 
 /**
-* további infók a form alterről, http://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_form_alter/7
-*/
+ * Kapcsold be a Devel modult, és ezzel megkaphatod mik a formok id-jai a látogatott oldalon. 
+ * Ha használni szeretnéd, kapcsold be a devel modult és kommenteld ki a következő dpm-et. 
+ */
+
 function formolok_form_alter(&$form, &$form_state, $form_id) {
-  // kapcsold be a Devel modult, és ezzel megkaphatod mik a formok id-jai a látogatott oldalon. Ha hazsnálni szeretnéd kapcsold be a devel modult, és kommenteld ki a következő sort. 
   // dpm($form_id);
 }
-
-// a drupal oldalad /user oldalon található formjának módosítása
+// A drupal oldalad /user oldalon található formjának módosítása
 function formolok_form_user_login_alter(&$form, &$form_state) {  
   // Submit elem értékének átírása
-  $form['actions']['submit']['#value'] = 'Go, Go, Gooo';
-  
+  $form['actions']['submit']['#value'] = 'Go, Go, Gooo'; 
   // Submit elem súlyának módosítsa
   $form['actions']['#weight'] = -1;
-  
   // Usernév elem súlyának módosítása 
   $form['name']['#weight'] = 0;
-  
   // Usernév elem súlyának módosítása 
   $form['pass']['#weight'] = -2;
 }
+
+/**
+* további infók a form alterről, goo.gl/CG2dw
+*/
